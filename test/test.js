@@ -1,8 +1,14 @@
 var assert = require("assert");
-import todo from "../dist/collections";
+import {ArrayList, Float32List} from "../dist/collections";
 
-describe("Package", function () {
+describe("ArrayList", function () {
   it("works", ()=>{
-    assert.equal(todo(), 42);
+    assert.ok(new ArrayList());
+  });
+});
+
+describe("Float32List", function () {
+  it("works", ()=>{
+    assert.ok(new Float32List());
   });
 });
