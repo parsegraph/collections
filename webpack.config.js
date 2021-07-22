@@ -12,9 +12,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|ts|tsx?)$/,
+        test: /\.(js)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader!ts-loader'
+        use: ["babel-loader"],
+      },
+      {
+        test: /\.tsx?$/,
+        loader: "babel-loader",
       },
       {
         test: /\.(glsl|vs|fs|vert|frag)$/,
