@@ -14,16 +14,16 @@ jobs:
       matrix:
         node-version: [14.x]
     steps:
-    - uses: actions/checkout@v2
-    - run: ls -R
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: NODE_ENV=production npm ci --omit=dev
-    - run: NODE_ENV=production make clean build-prod
-    - run: NODE_ENV=production make tar-prod
-    - uses: actions/upload-artifact@v2
-      with:
-        name: parsegraph-collections-prod-${{ github.run_number }}
-        path: parsegraph-collections-prod.tgz
+      - uses: actions/checkout@v2
+      - run: ls -R
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: NODE_ENV=production npm ci --omit=dev
+      - run: NODE_ENV=production make clean build-prod
+      - run: NODE_ENV=production make tar-prod
+      - uses: actions/upload-artifact@v2
+        with:
+          name: parsegraph-collections-prod-${{ github.run_number }}
+          path: parsegraph-collections-prod.tgz
