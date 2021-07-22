@@ -2,7 +2,8 @@
   "name": "parsegraph-collections",
   "version": "1.4.1-dev",
   "description": "collections",
-  "main": "dist/collections.js",
+  "main": "dist/parsegraph-collections.js",
+  "types": "dist/parsegraph-collections.d.ts",
   "scripts": {
     "coverage": "nyc npm run test",
     "test": "mocha -r @babel/register -r jsdom-global/register --recursive",
