@@ -1,7 +1,7 @@
 DIST_NAME = collections
 
 SCRIPT_FILES = \
-	src/index.ts
+	src/collections.ts
 
 all: build lint test coverage esdoc
 
