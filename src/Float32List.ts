@@ -2,12 +2,12 @@ export default class Float32List {
   _data: Float32Array;
   _length: number;
 
-  constructor(initialSize:number = 8) {
+  constructor(initialSize: number = 8) {
     this._data = new Float32Array(initialSize);
     this._length = 0;
   }
 
-  push(...args:number[]) {
+  push(...args: number[]) {
     for (let i = 0; i < args.length; ++i) {
       if (this._length == this._data.length) {
         const created = new Float32Array(2 * this._data.length);
@@ -18,7 +18,7 @@ export default class Float32List {
       }
       const v = args[i];
       if (Number.isNaN(v)) {
-        throw new Error('Pushed value is NaN');
+        throw new Error("Pushed value is NaN");
       }
       this._data[this._length++] = v;
     }

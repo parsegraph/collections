@@ -19,17 +19,17 @@ export default class ArrayList<T> {
     return this._data.slice(0, this.length());
   }
 
-  forEach(cb:(val:T, index:number)=>void) {
+  forEach(cb: (val: T, index: number) => void) {
     for (let i = 0; i < this.length(); ++i) {
       cb(this.at(i), i);
     }
   }
 
-  concat<U extends T = T>(other:ArrayList<U>) {
-    other.forEach(val=>this.push(val));
+  concat<U extends T = T>(other: ArrayList<U>) {
+    other.forEach((val) => this.push(val));
   }
 
-  push(...args:T[]) {
+  push(...args: T[]) {
     for (let i = 0; i < args.length; ++i) {
       if (this._length == this._data.length) {
         this._data.push(args[i]);
@@ -40,9 +40,9 @@ export default class ArrayList<T> {
     }
   }
 
-  at(i: number):T {
+  at(i: number): T {
     if (i >= this._length || i < 0) {
-      throw new Error('Index out of bounds: ' + i);
+      throw new Error("Index out of bounds: " + i);
     }
     return this._data[i];
   }
