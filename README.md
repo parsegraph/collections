@@ -1,3 +1,3 @@
 # collections
 
-See DEVELOPING.md and DEPLOYING.md
+This module contains two lists: ArrayList and Float32List.

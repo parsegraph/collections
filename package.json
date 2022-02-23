@@ -1,17 +1,9 @@
 {
   "name": "parsegraph-collections",
-  "version": "1.4.1-dev",
+  "version": "1.4.1",
   "description": "collections",
-  "main": "dist/parsegraph-collections.js",
-  "types": "dist/parsegraph-collections.d.ts",
-  "scripts": {
-    "coverage": "nyc npm run test",
-    "test": "mocha -r @babel/register -r jsdom-global/register --recursive",
-    "demo": "node demo/demo.js",
-    "autobuild": "webpack --watch --config webpack.config.js",
-    "build": "webpack --config webpack.config.js",
-    "build-prod": "NODE_ENV=production webpack --config webpack.prod.js"
-  },
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/parsegraph/collections.git"
@@ -22,21 +14,6 @@
     "url": "https://github.com/parsegraph/collections/issues"
   },
   "homepage": "https://github.com/parsegraph/collections#readme",
-  "nyc": {
-    "extends": "@istanbuljs/nyc-config-babel",
-    "reporter": [
-      "text-summary",
-      "html"
-    ],
-    "exclude": [
-      "test/**.js",
-      "dist/**.js"
-    ],
-    "reportDir": "dist/coverage"
-  },
-  "dependencies": {
-    "loader-utils": "^2.0.0"
-  },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.5",

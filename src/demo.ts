@@ -1,11 +1,16 @@
-import todo from ".";
+import {ArrayList} from ".";
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("demo");
   root.style.position = "relative";
 
+  const al:ArrayList<string> = new ArrayList<string>();
+  al.push("A");
+  al.push("B");
+  al.push("C");
+
   const container = document.createElement("div");
-  container.innerHTML = `${todo()}`;
+  container.innerHTML = `${al.length()}`;
   container.style.position = "absolute";
   container.style.left = "0px";
   container.style.top = "0px";
