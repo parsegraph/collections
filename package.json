@@ -1,6 +1,6 @@
 {
   "name": "parsegraph-collections",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "collections",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
